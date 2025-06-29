@@ -58,19 +58,16 @@ for token in model.generate(
 
 ### Jupyter Notebook Usage
 
-Open `simpleLLM.ipynb` for an interactive experience with streaming text generation.
+Open `comprehensive_llama_demo.ipynb` for a complete interactive guide with all features, benchmarks, and educational content.
 
 ## 📁 Project Structure
 
 ```
 cogai4sci/
-├── fast_llm.py              # Main FastLLM class with instant startup
-├── simplestLLM.py           # Optimized standalone implementation  
-├── simpleLLM.ipynb          # Interactive Jupyter notebook
-├── standalone-llama32.ipynb # Reference implementation
-├── test_fixes.py            # Test suite for verification
-├── performance_test.py      # Performance benchmarking
-└── fast_demo.py            # Quick demo script
+├── fast_llm.py                    # Main FastLLM class with instant startup
+├── simplestLLM.py                 # Optimized standalone implementation  
+├── comprehensive_llama_demo.ipynb # Complete interactive demo notebook
+└── standalone-llama32.ipynb       # Reference implementation
 ```
 
 ## 🔬 Key Implementations
@@ -114,10 +111,9 @@ cogai4sci/
 
 ## 📈 Benchmarks
 
-Run benchmarks with:
+All benchmarks, tests, and demonstrations are included in the comprehensive notebook:
 ```bash
-python performance_test.py
-python test_fixes.py
+jupyter notebook comprehensive_llama_demo.ipynb
 ```
 
 ## 🎯 Use Cases
@@ -145,17 +141,14 @@ This project is released under the Apache 2.0 License. See [LICENSE](LICENSE) fo
 ## ⚡ Quick Commands
 
 ```bash
-# Test both 1B and 3B models
-python test_fixes.py
+# Complete interactive demo with all features
+jupyter notebook comprehensive_llama_demo.ipynb
 
-# Run performance benchmarks  
-python performance_test.py
+# Quick Python usage
+python -c "from fast_llm import FastLLM; model = FastLLM('meta-llama/Llama-3.2-1B-Instruct'); print(''.join(model.generate('Hello world', max_new_tokens=20)))"
 
-# Quick demo with instant startup
-python fast_demo.py
-
-# Interactive notebook
-jupyter notebook simpleLLM.ipynb
+# Educational standalone implementation
+python simplestLLM.py
 ```
 
 ---
