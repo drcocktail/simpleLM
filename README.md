@@ -65,21 +65,17 @@ Open `comprehensive_llama_demo.ipynb` for a complete interactive guide with all 
 ```
 cogai4sci/
 ├── fast_llm.py                    # Main FastLLM class with instant startup
-├── simplestLLM.py                 # Optimized standalone implementation  
 ├── comprehensive_llama_demo.ipynb # Complete interactive demo notebook
-└── standalone-llama32.ipynb       # Reference implementation
+└── README.md                      # This documentation
 ```
 
-## 🔬 Key Implementations
+## 🔬 Key Implementation
 
-### 1. FastLLM (`fast_llm.py`)
-- **Class-level model caching** for instant subsequent loads
+### FastLLM (`fast_llm.py`)
+- **Class-level model caching** for instant subsequent loads (similar to Ollama)
 - **Optimized weight loading** for both 1B and 3B models
 - **Streaming token generation** with proper tokenization
 - **KV cache optimization** for faster inference
-
-### 2. SimplestLLM (`simplestLLM.py`)
-- **Educational implementation** with clear, readable code
 - **Complete architecture** including RoPE, GroupedQueryAttention, FeedForward
 - **Proper dtype handling** for Apple Silicon compatibility
 - **Comprehensive tokenizer** with special token support
@@ -146,9 +142,6 @@ jupyter notebook comprehensive_llama_demo.ipynb
 
 # Quick Python usage
 python -c "from fast_llm import FastLLM; model = FastLLM('meta-llama/Llama-3.2-1B-Instruct'); print(''.join(model.generate('Hello world', max_new_tokens=20)))"
-
-# Educational standalone implementation
-python simplestLLM.py
 ```
 
 ---
